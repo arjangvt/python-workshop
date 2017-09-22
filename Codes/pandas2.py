@@ -29,52 +29,40 @@ import numpy as np
 #df = df.cumsum()
 #df.plot();
 
-ts = pd.Series(np.random.randn(1000))
-df = pd.DataFrame(np.random.randn(1000, 5), index=ts.index, columns=list('ABCDE'))
+#ts = pd.Series(np.random.randn(1000))
+#df = pd.DataFrame(np.random.randn(1000, 5), index=ts.index, columns=list('ABCDE'))
 # Purely integer-location based indexing for selection by position.
-df.iloc[5].plot(kind='bar');
-plt.axhline(0, color='k')
-plt.show()
-
-
-
-
-
-#Location = r'Data\births1880.csv'
-#df = pd.read_csv(Location)
-#print(df)
-
-#df = pd.read_csv(Location, header=None)
-#print(df)
-
-#df = pd.read_csv(Location, names=['Names','Births'])
-#print(df)
-
-
-# Analazing the data
-# Method 1:
-#Sorted = df.sort_values(['Births'], ascending=False)
-#print(Sorted.head(1))
-#print(df['Births'].max())
-
-# Create graph
-#df['Births'].plot()
-
-# Maximum value in the data set
-#MaxValue = df['Births'].max()
-
-# Name associated with the maximum value
-#MaxName = df['Names'][df['Births'] == df['Births'].max()].values
-
-# Text to display on graph
-#Text = str(MaxValue) + " - " + MaxName
-
-# Add text to graph
-#plt.annotate(Text, xy=(1, MaxValue), xytext=(8, 0), 
-#                 xycoords=('axes fraction', 'data'), textcoords='offset points')
-
-#print("The most popular name")
-#df[df['Births'] == df['Births'].max()]
-#Sorted.head(1) can also be used
+#df.iloc[5].plot(kind='bar');
+#plt.axhline(0, color='k')
 #plt.show()
 
+
+
+#df = pd.DataFrame(np.random.rand(10, 5), columns=['A', 'B', 'C', 'D', 'E'])
+#df.plot.box()
+#plt.show()
+
+#df = pd.DataFrame(np.random.rand(10, 5), columns=['A', 'B', 'C', 'D', 'E'])
+#color = dict(boxes='DarkGreen', whiskers='DarkOrange', medians='DarkBlue', caps='Gray')
+#df.plot.box(color=color, sym='r+')
+#plt.show()
+
+#df = pd.DataFrame(np.random.rand(10, 4), columns=['a', 'b', 'c', 'd'])
+#df.plot.area();
+#plt.show()
+
+#df = pd.DataFrame(np.random.rand(10, 4), columns=['a', 'b', 'c', 'd'])
+#df.plot.area(stacked=False);
+#plt.show()
+
+#df = pd.DataFrame(np.random.rand(50, 4), columns=['a', 'b', 'c', 'd'])
+#df.plot.scatter(x='a', y='b');
+#plt.show()
+
+#df = pd.DataFrame(np.random.rand(50, 4), columns=['a', 'b', 'c', 'd'])
+#df.plot.scatter(x='a', y='b', c='c', s=50);
+#plt.show()
+
+#series = pd.Series(3 * np.random.rand(4), index=['a', 'b', 'c', 'd'], name='series')
+#series.plot.pie(figsize=(6, 6))
+#plt.show()
